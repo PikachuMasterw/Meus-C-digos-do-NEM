@@ -1,0 +1,92 @@
+EXECUTAR CÓDIGO
+1° Icone de RAIO (Compilar Código) >> Ícone de RAIO com círculo verde (Executar Código) >> FEITO
+
+CREATE: Criar algo no programa.
+
+CREATE DATABASE: Criar uma banco de dados (Ex.: CREATE DATABASE aula1).
+
+CREATE TABLE: Criar tabela (Ex.: CREATE TABLE produtos).
+
+INSERT INTO: Inserir dados na tabela (Ex.: INSERT INTO produtos (NOME_PRODUTO, PRECO)).
+
+SELECT: Ver registros na tabela (Ex.: SELECT * FROM produtos).
+
+DELETE: Remover um registro (Ex.: DELETE FROM produtos WHERE COD_PROD = 5).
+
+DROP: Remover uma tabela (Ex.: DROP TABLE produtos;).
+
+TRUNCATE: Limpar uma tabela (Ex.: TRUNCATE TABLE produtos;).
+
+UPDATE: Atualizar informações (Ex.: UPDATE produtos SET PRECO = 4000.00 WHERE COD_PROD = 1;).
+
+LIMIT: Especifica o número máximo de registros a retornar.
+
+COUNT(): Retorna o número de registros.
+
+SUM(): Retorna a soma total.
+
+AVG(): Retorna o valor médio.
+
+MIN(): Retorna o menor valor.
+
+MAX(): Retorna o maior valor.
+
+AS: Renomeia uma coluna ou tabela com um alias.
+
+ORDER BY: Ordena os registros por uma ou mais colunas.
+
+SET: Especifica as colunas e os valores a serem atualizados.
+
+PRIMARY KEY: Define a chave primária de uma tabela.
+
+FOREIGN KEY: Define a chave estrangeira de uma tabela.
+
+AUTO_INCREMENT: Auto numeração de colunas.
+
+BINARY: Converte uma string para uma forma binária.
+
+SIGNED: Converte um valor para um número inteiro com sinal.
+
+UNSIGNED: Converte um valor para um número inteiro sem sinal.
+
+VARCHAR(n): Declara uma coluna com caracteres variáveis.
+
+CHAR(n): Declara uma coluna com um número fixo de caracteres.
+
+TEXT: Usado para armazenar grandes volumes de texto, sem limite de tamanho
+pré-definido.
+
+USE: Usar algo posteriormente no código (Ex.: USE aula1).
+
+INT ou INTEGER: Números inteiros.
+
+DECIMAL(p,s) ou NUMERIC(p,s): Armazena números com casas decimais de
+precisão definida. O parâmetro p indica o número total de dígitos e s o número de
+casas decimais.
+
+FLOAT ou REAL: Armazena números com ponto flutuante (números que podem ter
+casas decimais variáveis). São úteis para cálculos científicos e dados que não
+exigem precisão extrema.
+
+GROUP BY: Total de unidades vendidas por produto (Ex.: SELECT produto, SUM(quantidade) AS total vendido FROM vendas GROUP BY produto;).
+
+DATE: Armazena apenas a data no formato YYYY-MM-DD (ano-mês-dia).
+
+TIME: Armazena apenas o horário no formato HH:MI:SS (hora-minuto-segundo).
+
+TIMESTAMP: Armazena tanto a data quanto a hora, no formato YYYY-MM-DD.
+
+BETWEEN: É usado para filtrar valores dentro de um intervalo, seja ele
+numérico, de datas ou até mesmo de strings.
+
+LIKE: No MySQL é utilizado para buscar padrões em strings. Ele pode ser
+combinado com os símbolos % (qualquer sequência de caracteres) e _ (um caractere
+único).
+
+LENGTH(): No MySQL retorna o número de caracteres em uma string.
+
+FOREIGN KEY: "Chave Estrangeira"
+
+PRIMARY KEY: "Chave Primária"
+
+JOIN: "Juntar"

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercadin</title>
+    <link rel="icon" href="https://images.icon-icons.com/1138/PNG/512/1486395307-17-store_80571.png">
+
+    <style>
+        body {
+            background-image: url("mercado.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .caixa1 {
+            background-color: rgb(170, 168, 168);
+            padding: 20px;
+            max-width: 400px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .tc {
+            text-align: center;
+            color: rgb(248, 14, 131);
+        }
+
+        button {
+            padding: 10px;
+            background-color: rgb(248, 14, 131);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <h1 class="tc">Mercadin</h1>
+    <h2 class="tc">Versão 0.3</h2>
+
+    <div class="caixa1">
+        <form action="salvar.php" method="post">
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="data_nascimento">Data de nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <button type="button" onclick="window.location.href='produtos.html'">Acesse os produtos</button>
+        </form>      
+    </div>
+
+</body>
+</html>

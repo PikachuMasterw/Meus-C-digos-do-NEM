@@ -1,0 +1,25 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    float ht, vh = 8.17, pd, sb, td, sl;
+    
+    cout << "Quantas horas você trabalhou no mês? (Digite em horas): ";
+    cin >> ht;
+    
+    sb = ht * vh;
+    
+    cout<< "Salário Bruto: "<<sb;
+    cout<< "\nPercentual de desconto do INSS: ";
+    cin>> pd;
+    
+    td = sb * pd /100;
+    
+    cout<< "Desconto do INSS: " <<td;
+    
+    sl = sb - td;
+    cout<< "\nSalário Líquido: " <<sl;
+
+    return 0;
+}

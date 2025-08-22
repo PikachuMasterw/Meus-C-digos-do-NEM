@@ -1,0 +1,173 @@
+:root {
+  --primary: #1565c0;
+  --secondary: #e3f2fd;
+  --accent: #c62828;
+  --bg: #fff;
+  --text: #333;
+  --radius: 8px;
+  --spacing: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: var(--primary);
+  color: white;
+  padding: var(--spacing);
+}
+
+.sidebar h2 {
+  margin-bottom: var(--spacing);
+  font-size: 1.25rem;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav li {
+  margin-bottom: 0.75rem;
+}
+
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.sidebar nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Dashboard */
+.dashboard {
+  flex: 1;
+  padding: var(--spacing);
+  overflow-y: auto;
+}
+
+.header {
+  margin-bottom: var(--spacing);
+}
+
+.header h2 {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+/* Section Titles and Controls */
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+select {
+  width: 200px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing);
+  font-size: 1rem;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: var(--spacing);
+}
+
+th, td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+th {
+  background: var(--primary);
+  color: white;
+  font-weight: normal;
+}
+
+/* Buttons */
+button {
+  padding: 0.4rem 0.8rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background: #a31545;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Inline Input for Salary Editing */
+.inline-input {
+  width: 80px;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  margin-right: 0.5rem;
+}
+
+/* Reajustes (Adjustments) List */
+#reajustes-list {
+  list-style: none;
+  margin-top: var(--spacing);
+}
+
+#reajustes-list li {
+  background: var(--bg);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+}
+
+/* Recibos Table Button */
+.btn-encaminhar {
+  background: var(--primary);
+}
+
+.btn-encaminhar:hover {
+  background: #0d47a1;
+}

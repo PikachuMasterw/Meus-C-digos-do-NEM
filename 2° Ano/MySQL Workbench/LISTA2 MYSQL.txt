@@ -1,0 +1,42 @@
+CREATE DATABASE q1;
+USE q1;
+
+CREATE TABLE vendas (
+id_venda INT PRIMARY KEY,
+produto VARCHAR(100),
+quantidade INT,
+valor DECIMAL(10, 2),
+data_venda DATE
+);
+
+INSERT INTO vendas (id_venda, produto, quantidade, valor, data_venda)
+VALUES
+(1, 'Celular', 2, 1500, '2024-08-01'),
+(2, 'Celular', 1, 1500, '2024-08-02'),
+(3, 'Notebook', 1, 3000, '2024-08-03'),
+(4, 'TV', 3, 1200, '2024-08-04'),
+(5, 'Celular', 1, 1500, '2024-08-05');
+
+1)
+SELECT produto, SUM(quantidade) AS total_vendido FROM vendas GROUP BY produto;
+
+2)
+SELECT DATE_FORMAT(data_venda, '%Y-%m') AS mes_venda, COUNT(*) AS
+total_vendas
+FROM vendas
+GROUP BY mes_venda;
+
+3)
+SELECT *
+FROM vendas
+WHERE data_venda BETWEEN '2024-08-01' AND '2024-08-03';
+
+4)
+SELECT *
+FROM vendas
+WHERE produto LIKE 'Cel%';
+
+5)
+SELECT produto
+FROM vendas
+WHERE LENGTH(produto) > 6;

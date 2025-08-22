@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int soma = 0;
+    
+    for(int i = 26; i < 100; i += 2){
+        cout<<i<<" , ";
+        soma = soma + i;
+    }
+  
+    cout<<"\n\nA soma dos números pares: "<<soma;
+    return 0;
+}

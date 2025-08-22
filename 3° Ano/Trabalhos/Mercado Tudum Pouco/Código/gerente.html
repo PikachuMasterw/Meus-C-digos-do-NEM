@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Painel do Gerente – Mercado</title>
+  <link rel="stylesheet" href="gerente.css" />
+  <link rel="icon" href="https://images.icon-icons.com/1138/PNG/512/1486395307-17-store_80571.png"/>
+
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Gerente</h2>
+    <nav>
+      <ul>
+        <li><a href="#pedidos">Pedidos</a></li>
+        <li><a href="#salarios">Salários</a></li>
+        <li><a href="#recibos">Recibos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="dashboard">
+    <div class="header">
+      <h2>Bem-vindo, <span id="nome-usuario"></span></h2>
+    </div>
+
+    <!-- Seção Pedidos -->
+    <section id="pedidos">
+      <h2>Pedidos</h2>
+      <label for="filtro-status">Filtrar por status:</label>
+      <select id="filtro-status">
+        <option>Todos</option>
+        <option>Pendente</option>
+        <option>Em andamento</option>
+        <option>Concluído</option>
+      </select>
+      <table>
+        <thead>
+          <tr>
+            <th>Pedido</th>
+            <th>Cliente</th>
+            <th>Total (R$)</th>
+            <th>Status</th>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody id="pedidos-body"></tbody>
+      </table>
+    </section>
+
+    <!-- Seção Salários -->
+    <section id="salarios">
+      <h2>Gerenciar Salários</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Cargo</th>
+            <th>Salário (R$)</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="funcionarios-body"></tbody>
+      </table>
+      <h3>Histórico de Reajustes</h3>
+      <ul id="reajustes-list"></ul>
+    </section>
+
+    <!-- Seção Recibos -->
+    <section id="recibos">
+      <h2>Recibos de Compra</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Pedido</th>
+            <th>Recibo</th>
+            <th>Encaminhado</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="recibos-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="gerente.js"></script>
+</body>
+</html>

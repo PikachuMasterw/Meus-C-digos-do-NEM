@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastro – Mercado</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <main class="login-container">
+    <h1>Cadastro de Conta</h1>
+    <form id="form-cadastro">
+      <label for="perfil">Perfil:</label>
+      <select id="perfil" required>
+        <option value="" disabled selected>Selecione o perfil</option>
+        <option value="usuario">Usuário</option>
+        <option value="gerente">Gerente</option>
+        <option value="entregador">Entregador</option>
+      </select>
+
+      <label for="usuario">Nome de usuário:</label>
+      <input type="text" id="usuario" required />
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" required />
+
+      <label for="senha-confirm">Confirme a senha:</label>
+      <input type="password" id="senha-confirm" required />
+
+      <button type="submit" id="btn-cadastro" disabled>Cadastrar</button>
+      <p id="msg-cadastro" class="error hidden"></p>
+    </form>
+
+    <p style="margin-top:1rem;">
+      Já tem conta? <a href="login.html">Faça login aqui</a>
+    </p>
+  </main>
+
+  <script src="cadastro.js"></script>
+</body>
+</html>

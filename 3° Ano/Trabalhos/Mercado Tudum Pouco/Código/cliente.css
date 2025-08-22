@@ -1,0 +1,228 @@
+:root {
+  --primary: #2e7d32;
+  --secondary: #e0f2f1;
+  --accent: #c2185b;
+  --bg: #fff;
+  --text: #333;
+  --radius: 8px;
+  --spacing: 1rem;
+  --kpi-bg: #f9f9f9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: var(--primary);
+  color: white;
+  padding: var(--spacing);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+
+.sidebar h2 {
+  margin-bottom: var(--spacing);
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-carrinho {
+  margin-top: auto;
+  background: white;
+  color: var(--primary);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-carrinho:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* Conteúdo Principal */
+.dashboard {
+  flex: 1;
+  padding: var(--spacing);
+  overflow-y: auto;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+/* Lista de Cards */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  gap: var(--spacing);
+}
+
+.card {
+  background: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  max-height: 180px;    /* altura máxima, mas mantém proporção */
+  height: auto;         /* ajusta a altura conforme a largura */
+  object-fit: contain;  /* cabe inteiramente no espaço, sem cortes */
+  background: var(--secondary); /* fundo neutro caso haja espaço extra */
+}
+
+
+.card-content {
+  padding: var(--spacing);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h4 {
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.btn-comprar {
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-comprar:hover {
+  background: #1b5e20;
+}
+
+/* Tabela de Histórico */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+th, td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background: var(--primary);
+  color: white;
+}
+
+/* Modal de Carrinho */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.fechar {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#carrinho-lista {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+#carrinho-lista li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.btn-finalizar {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-finalizar:hover {
+  background: #a31545;
+}

@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    float novosalario, salario;
+    
+    cout<<"Digite o salário: ";
+    cin>> salario;
+    
+    if( salario < 500){
+        novosalario = salario * 1.15;
+        cout<<"O salário novo foi: " << novosalario; 
+    }
+    
+    else{
+      if( salario <= 1000){
+         novosalario = salario * 1.10;
+         cout<<"O salário novo foi: " << novosalario; 
+        }
+     else{
+         novosalario = salario * 1.05;
+         cout<<"O salário novo foi: " << novosalario;
+        }
+    }
+    
+    return 0;
+ }

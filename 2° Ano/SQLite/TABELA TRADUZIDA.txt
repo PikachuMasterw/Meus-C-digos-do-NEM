@@ -1,0 +1,32 @@
+ALTER TABLE Customers
+RENAME TO Clientes;
+ALTER TABLE Clientes
+RENAME COLUMN  customer_id TO id_cliente;
+ALTER TABLE Clientes
+RENAME COLUMN first_name TO nome;
+ALTER TABLE Clientes
+RENAME COLUMN last_name TO sobrenome;
+ALTER TABLE Clientes
+RENAME COLUMN age TO idade;
+ALTER TABLE Clientes
+RENAME COLUMN country TO nacionalidade;
+
+ALTER TABLE Orders
+RENAME TO Ordens;
+ALTER TABLE Ordens
+RENAME COLUMN order_id TO id_ordem;
+ALTER TABLE Ordens
+RENAME COLUMN item TO objeto;
+ALTER TABLE Ordens
+RENAME COLUMN amount TO quantidade;
+ALTER TABLE Ordens
+RENAME COLUMN customer_id TO id_clientes;
+
+ALTER TABLE Shippings
+RENAME TO Envios;
+ALTER TABLE Envios
+RENAME COLUMN shipping_id TO id_envio;
+ALTER TABLE Envios
+RENAME COLUMN status TO estatuto;
+ALTER TABLE Envios
+RENAME COLUMN customer TO cliente;

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Simples</title>
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <form>
+        <!--NOME-->
+        <label for="nome">Nome Completo:</label>
+        <input type="text" name="nome" placeholder="Digite seu nome completo..." required><br><br>
+
+        <!-- EMAIL -->
+        <label for="email">Email:</label>
+        <input type="text" name="email" placeholder="Digite seu email..." required><br><br>
+
+        <!-- SENHA -->
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" placeholder="Insira uma senha..." required><br><br>
+
+        <!--OPÇÃO DE SELEÇÃO DE ESTADOS (dropdown)-->
+        <label for="estado">Cidade:</label>
+        <select name="estado" required> 
+            <option value=""></option>
+            <option value="sp">São Paulo</option>
+            <option value="rj">Rio de Janeiro</option>
+            <option value="es">Espírito Santo</option>
+            <option value="mg">Minas Gerais</option>
+        </select><br><br>
+
+        <!--RADIO BUTTON-->
+        <label for="genero">Gênero</label><br>
+
+        <input type="radio" name="genero" value="masculino" required>
+        <label for="masculino">Masculino</label><br>
+
+        <input type="radio" name="genero" value="feminino" required>
+        <label for="feminino">Feminino</label><br><br>
+
+        <!--CHECKBOX-->
+        <input type="checkbox" name="checkbox" required>
+        <label for="termos">Aceito os termos de uso</label><br><br>
+
+        <!--BOTÃO DE ENVIO-->
+        <button type="submit">Cadastrar</button>
+    </form>
+    <br><br><p>Tá afim de um lanchinho?</p>
+    <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3VwY2FrZXxlbnwwfHwwfHx8MA%3D%3D"
+    alt="Imagem de um Cupcake" width="300">
+    <p>ENTÃO VAI LÁ COMPRAR KKKKKKKKKKKKKKKKK</p>
+</body>
+</html>

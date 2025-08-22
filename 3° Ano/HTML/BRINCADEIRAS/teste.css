@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:rgb(153, 153, 153)
+}
+
+.nav_bar{
+    background-color: rgb(51, 120, 74);
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav_bar ul{
+    display: flex;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.nav_bar ul li{
+    list-style: none;
+    padding: 15px;
+    background-color:bisque;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.nav_bar ul li a{
+    text-decoration:none;
+    color: brown;
+    font-size: larger;
+    padding: 5px;
+}
+
+.titulo{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    background-color: rgb(0, 101, 42);
+}
+
+#inicio{
+    background-color: rgb(109, 109, 109);
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#inicio h2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+}
+
+#inicio p{
+    text-align:justify;
+    font-size: large;
+    padding: 10px;
+}
+
+#inicio hr{
+    visibility: hidden;
+}
+
+#sobre{
+    background-color: rgb(109, 109, 109);
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#sobre h2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+}
+
+#sobre p{
+    text-align:justify;
+    font-size: large;
+    padding: 10px;
+}
+
+#sobre h3{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+}
+
+#sobre hr{
+    visibility: hidden;
+}
+
+#dicas{
+    background-color: rgb(109, 109, 109);
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#dicas h2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+}
+
+#dicas h3{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+}
+
+#dicas p{
+    text-align:justify;
+    font-size: large;
+    padding: 10px;
+}
+
+#dicas hr{
+    visibility: hidden;
+}
+
+#dicas ul li{
+    text-align: start;
+    font-weight: bold;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+}
+
+#dicas ul p{
+    text-align: start;
+    margin: 10px;
+}
+
+#contatos{
+    background-color: rgb(109, 109, 109);
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#contatos h2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+}
+
+#contatos h3{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+}
+
+#contatos form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(76, 76, 76);
+    border-radius: 20px;
+    padding: 10px;
+    width: 30vw;
+}
+
+#contatos fieldset{
+    visibility: hidden;
+}
+
+#contatos legend{
+    visibility: visible;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#contatos label{
+    visibility: visible;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#contatos input{
+    visibility: visible;
+    background-color:rgb(145, 145, 145);
+}
+
+#contatos button{
+    visibility: visible;
+    background-color: brown;
+}
+
+#endereço{
+    background-color: rgb(109, 109, 109);
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#endereço h3{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+}
+
+#endereço iframe{
+    border-radius: 20px;
+    height: 70vh;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.container img{
+    width: 30vw;
+    border-radius: 30px;
+}

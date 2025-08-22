@@ -1,0 +1,114 @@
+CREATE TABLE Departamento (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Funcionario (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+salario DECIMAL(10, 2) NOT NULL,
+departamento_id INT,
+FOREIGN KEY (departamento_id) REFERENCES Departamento(id)
+);
+
+INSERT INTO Departamento (nome) VALUES
+('Recursos Humanos'),
+('Financeiro'),
+('TI'),
+('Marketing'),
+('Logística');
+
+INSERT INTO Funcionario (nome, salario, departamento_id) VALUES
+('Ana', 5000.00, 5),
+('Bruno', 4500.00, 4),
+('Carlos', 6000.00, 3),
+('Daniela', 5500.00, 4),
+('Eduardo', 4800.00, 5),
+('Fernanda', 5200.00, 4),
+('Gabriel', 4700.00, 2),
+('Helena', 5300.00, 3),
+('Igor', 4900.00, 4),
+('Juliana', 5100.00, 5),
+('Lucas', 6200.00, 1),
+('Mariana', 5600.00, 2),
+('Nathalia', 4800.00, 5),
+('Otávio', 4700.00, 4),
+('Paula', 5300.00, 5),
+('Renato', 5800.00, 4),
+('Sabrina', 5100.00, 2),
+('Thiago', 4500.00, 5),
+('Ursula', 4900.00, 1),
+('Vinicius', 5400.00, 5),
+
+('William', 5200.00, 1),
+('Xavier', 4600.00, 2),
+('Yara', 6000.00, 5),
+('Zilda', 5500.00, 5),
+('Amanda', 4700.00, 5),
+('Brenda', 5100.00, 1),
+('Caio', 5900.00, 3),
+('Diego', 5300.00, 3),
+('Ellen', 5600.00, 2),
+('Fábio', 6200.00, 5);
+
+1)
+SELECT funcionario.nome, departamento.nome
+FROM funcionario
+JOIN departamento ON funcionario.departamento_id = departamento.id;
+
+2)
+SELECT departamento.nome, COUNT(funcionario.departamento_id) 
+AS Total_Funcionario
+FROM departamento
+JOIN funcionario ON departamento.id = funcionario.departamento_id
+GROUP BY departamento.nome;
+
+3)
+SELECT departamento.nome, AVG(funcionario.salario) AS MediaSalarial
+FROM departamento
+JOIN funcionario ON departamento.id = funcionario.departamento_id
+GROUP BY departamento.nome;
+
+4)
+SELECT funcionario.nome, MAX(funcionario.salario)
+AS MaxSalarial
+FROM departamento
+JOIN funcionario ON departamento.id = funcionario.departamento_id
+LIMIT 1;
+
+5)
+SELECT departamento.nome, COUNT(funcionario.departamento_id) 
+AS Total_Funcionario
+FROM departamento
+JOIN funcionario ON departamento.id = funcionario.departamento_id
+GROUP BY departamento.nome
+HAVING Total_Funcionario > 1;
+
+6)
+SELECT departamento.nome, SUM(funcionario.salario) AS SumSalarial
+FROM departamento
+JOIN funcionario ON departamento.id = funcionario.departamento_id
+GROUP BY departamento.nome;
+
+7)
+SELECT funcionario.nome, departamento.nome, funcionario.salario, MediaSalarial.MediaDepartamento
+FROM funcionario
+JOIN departamento ON departamento.id = funcionario.departamento_id
+JOIN (
+    SELECT departamento_id, AVG(salario) AS MediaDepartamento
+    FROM Funcionario
+    GROUP BY departamento_id
+) AS MediaSalarial ON MediaSalarial.departamento_id = funcionario.departamento_id
+WHERE funcionario.salario > MediaSalarial.MediaDepartamento;
+
+8)
+SELECT departamento.nome, MAX(funcionario.departamento_id) AS MaxFuncionario
+FROM departamento
+JOIN funcionario ON departamento.id = funcionario.departamento_id
+LIMIT 1;
+
+9)
+SELECT funcionário.nome, departamento.nome
+FROM funcionário
+JOIN departamento ON funcionário.departamento_id = departamento.id
+WHERE departamento.nome LIKE 'TI%';

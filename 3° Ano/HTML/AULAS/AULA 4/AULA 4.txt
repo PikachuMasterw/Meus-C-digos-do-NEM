@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparando Classes e id</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .vermelho{
+            background-color: red;
+            margin: 20px;
+            color :aliceblue
+        }
+
+        .central{
+            text-align: center;
+            font-family:serif;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        .azul{
+            background-color:blue;
+            margin: 20px;
+            color :aliceblue
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu livro</h1>
+    </header>
+    <div class="vermelho central">
+        <h2>Capitulo 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, itaque. Possimus nemo voluptate reiciendis quae, placeat hic ducimus quasi reprehenderit veniam magni distinctio, officiis necessitatibus ex illum cupiditate aut. Nesciunt!</p>
+    </div>
+
+    <div class="vermelho central">
+        <h2>Capitulo 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, itaque. Possimus nemo voluptate reiciendis quae, placeat hic ducimus quasi reprehenderit veniam magni distinctio, officiis necessitatibus ex illum cupiditate aut. Nesciunt!</p>
+    </div>
+
+    <div class="vermelho central">
+        <h2>Capitulo 3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, itaque. Possimus nemo voluptate reiciendis quae, placeat hic ducimus quasi reprehenderit veniam magni distinctio, officiis necessitatibus ex illum cupiditate aut. Nesciunt!</p>
+    </div>
+
+    <div class="azul">
+        <h2>Capitulo 4</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, itaque. Possimus nemo voluptate reiciendis quae, placeat hic ducimus quasi reprehenderit veniam magni distinctio, officiis necessitatibus ex illum cupiditate aut. Nesciunt!</p>
+    </div>
+
+
+
+
+
+
+</body>
+</html>

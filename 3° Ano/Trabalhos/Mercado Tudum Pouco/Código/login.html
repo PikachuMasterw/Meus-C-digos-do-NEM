@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login – Mercado</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="icon" href="https://images.icon-icons.com/1138/PNG/512/1486395307-17-store_80571.png">
+
+</head>
+<body>
+  <main class="login-container">
+    <h1>Mercado Tudum Pouco</h1>
+    <form id="form-login">
+      <label for="perfil">Entrar como:</label>
+      <select id="perfil" required>
+        <option value="" disabled selected>Selecione o perfil</option>
+        <option value="usuario">Usuário</option>
+        <option value="gerente">Gerente</option>
+        <option value="entregador">Entregador</option>
+      </select>
+
+      <label for="usuario">Usuário:</label>
+      <input type="text" id="usuario" required>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" required>
+
+      <button type="submit" id="btn-login" disabled>Entrar</button>
+      <p id="error-msg" class="error hidden"></p>
+    </form>
+
+    <p style="margin-top:1rem;">
+      Não tem conta? <a href="cadastro.html">Cadastre-se aqui</a>
+    </p>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>

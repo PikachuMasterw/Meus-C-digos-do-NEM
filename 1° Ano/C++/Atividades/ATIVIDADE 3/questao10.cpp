@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float fim, inicio, num, soma = 0, x;
+    
+    cout<<"Digite o número para ser multiplicado/somado: ";
+    cin>>num;
+    
+    cout<<"Digite quantas vezes ele será somado: ";
+    cin>>fim;
+    
+    for(int cont = inicio; cont < fim; cont++){
+        soma = num + soma;
+    }
+    cout<<num<<" x "<<fim<<" = "<<soma;
+    return 0;
+}

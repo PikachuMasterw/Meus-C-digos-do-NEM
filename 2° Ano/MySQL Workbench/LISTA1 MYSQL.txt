@@ -1,0 +1,84 @@
+CREATE DATABASE q2;
+USE q2;
+
+CREATE TABLE produtos (
+id_prod INTEGER PRIMARY KEY AUTO_INCREMENT,
+nome_prod VARCHAR(50),
+preco DECIMAL(10, 2),
+qtd_estoq INT
+);
+
+INSERT INTO produtos (nome_prod, preco, qtd_estoq)
+VALUES ('iPhone 2', 70000, 1),
+('iPhone 3', 210000, 1), 
+('iPhone 4', 280000, 1),
+('iPhone 5', 300000, 1),
+('Headset', 700, 500000),
+('Mouse', 27, 500000),
+('Teclado', 70, 500000),
+('Monitor', 200, 500000),
+('GTX 4900', 1000, 10000000),
+('Mousepad', 10, 10);
+
+SELECT * FROM produtos;
+
+SELECT nome_prod, preco FROM produtos;
+
+SELECT nome_prod, preco, qtd_estoq FROM produtos
+ORDER BY preco ASC;
+
+SELECT nome_prod, preco, qtd_estoq FROM produtos
+ORDER BY preco ASC LIMIT 3;
+
+UPDATE produtos
+SET preco = 29.7
+WHERE id_prod = 6;
+
+UPDATE produtos
+SET qtd_estoq = 20
+WHERE id_prod = 9;
+
+DELETE FROM produtos WHERE id_prod = 4;
+
+SELECT SUM(preco) FROM produtos;
+
+SELECT AVG(preco) FROM produtos;
+
+SELECT COUNT(id_cliente) FROM clientes;
+
+SELECT MAX(preco) FROM produtos;
+
+SELECT MAX(preco) FROM produtos;
+-------------------------------------------------------------------------------------------------------------------
+CREATE DATABASE q2;
+USE q2;
+
+CREATE TABLE clientes (
+id_cliente INTEGER PRIMARY KEY AUTO_INCREMENT, 
+nome VARCHAR(50), 
+email VARCHAR(50)
+);
+
+INSERT INTO clientes (nome, email)
+VALUES ('Anna', 'anna@gmail'),
+('Beatriz', 'bia@gmail'), 
+('Calebe', 'cal@gmail'), 
+('Davi', 'dav@gmail'), 
+('Eduardo', 'edu@gmail'), 
+('Fernanda', 'fernaa@gmail'),
+('Geovanna', 'Geoo@gmail'), 
+('Heitor', 'heitozao@gmail'), 
+('Ianna', 'ianna@gmail'), 
+('Joana', 'jojo@gmail');
+
+UPDATE clientes
+SET nome = 'João', email = 'joao@gmail'
+WHERE id_cliente = 20;
+
+SELECT nome, email FROM clientes
+ORDER BY nome DESC;
+
+SELECT nome, email FROM clientes
+ORDER BY nome DESC LIMIT 2;
+
+DELETE FROM clientes WHERE id_cliente = 5;

@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float tempo,distancia,velocidade;
+    
+    cout << "Qual foi a velocidade média da viagem: ";
+    cin >> velocidade;
+    
+    cout << "Quantos quilometros percorridos: ";
+    cin >> distancia; 
+    
+    tempo = velocidade / distancia;
+    
+    cout << "Foi cerca de: " << tempo << " horas" << endl;
+    
+    
+    return 0;
+}

@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float notas [2][5], soma = 0;
+    
+    for(int posi = 0;posi < 4; posi++){
+        cout<<"\nDigite uma nota: ";
+        cin>>notas[0][posi];
+        soma = soma + notas[0][posi];
+    }
+    notas[0][4] = soma / 4;
+     cout<<"Nota do aluno 1: "<<notas[0][4];
+     
+     soma = 0;
+    
+    for(int posi = 0;posi < 4; posi++){
+        cout<<"\nDigite uma nota: ";
+        cin>>notas[1][posi];
+        soma = soma + notas[0][posi];
+    }
+    
+    notas[1][4] = soma / 4;
+     cout<<"Nota do aluno 2: "<<notas[1][4];
+    
+
+    return 0;
+}

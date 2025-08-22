@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Painel do Entregador – Mercadin</title>
+  <link rel="stylesheet" href="entregador.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Entregador</h2>
+    <nav>
+      <ul>
+        <li><a href="#rota">Rota de Entrega</a></li>
+        <li><a href="#salario">Meu Salário</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="dashboard">
+    <div class="header">
+      <h2>Bem-vindo, <span id="nome-entregador">Entregador</span></h2>
+    </div>
+
+    <section id="rota">
+      <h2>Rota de Entrega</h2>
+      <table>
+        <thead>
+          <tr><th>Pedido</th><th>Cliente</th><th>Endereço</th><th>Data</th></tr>
+        </thead>
+        <tbody id="entrega-body">
+          <tr><td colspan="4">Carregando pedidos…</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="salario">
+      <h2>Meu Salário</h2>
+      <p><strong>Valor Atual:</strong> R$ <span id="valor-salario">--</span></p>
+    </section>
+  </main>
+
+  <script src="entregador.js"></script>
+</body>
+</html>

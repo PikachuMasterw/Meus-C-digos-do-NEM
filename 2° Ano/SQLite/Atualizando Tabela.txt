@@ -1,0 +1,6 @@
+INSERT INTO Clientes (nome, sobrenome, idade, nacionalidade)
+VALUES ('Lívia', 'Lopes', 17, 'BRA');
+
+UPDATE Clientes
+SET id_cliente = 6
+WHERE nome = 'Lívia';

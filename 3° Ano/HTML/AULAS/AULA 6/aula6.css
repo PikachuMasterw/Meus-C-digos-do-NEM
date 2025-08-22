@@ -1,0 +1,24 @@
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            background-color: rgb(63, 62, 62);
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .item{
+            background-color: rgb(62, 200, 62);
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+            border-radius: 5px;
+        }

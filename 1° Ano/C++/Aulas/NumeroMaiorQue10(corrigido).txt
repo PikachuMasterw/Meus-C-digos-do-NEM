@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float x, y, z, ç;
+    
+    cout<<"Digite o primeiro número: ";
+    cin>>x;
+    
+    cout<<"Digite o segundo número: ";
+    cin>>y;
+    
+    z = x + y;
+    
+    if(z >= 10)
+        ç = z + 5;       
+    else
+        ç = z - 7;
+            
+    cout<<"O número foi < 10; O resultado foi : " <<ç; 
+    return 0;
+}

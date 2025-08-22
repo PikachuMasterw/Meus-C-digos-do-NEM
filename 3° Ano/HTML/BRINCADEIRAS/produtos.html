@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="icon" href="https://images.icon-icons.com/2328/PNG/512/virus_sanitizer_personal_care_products_icon_142216.png">
+    
+    <style>
+        body { background-color: wheat; font-family: Arial, sans-serif; text-align: center; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; }
+        .produto, .carrinho { 
+            margin: 20px; padding: 20px; border-radius: 10px; background-color: rgb(180, 178, 178);
+        }
+        .produto { width: 300px; }
+        .carrinho { width: 300px; }
+        button { padding: 10px 20px; background-color: green; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>Aqui você encontrará os melhores produtos!</h1>
+
+    <div class="carrinho">
+        <h2>Carrinho</h2>
+        <ul id="carrinho"></ul>
+        <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
+        <button onclick="finalizarCompra()">Pagar</button>
+    </div>
+
+    <div class="container">
+        <div class="produto">
+            <h2>Viagra do Bolsonaro</h2>
+            <img src="https://t.grupofarmapronto.com/wp-content/uploads/2022/11/7501287688217.png" alt="Produto A" width="100%">
+            <h3>R$ 35,90</h3>
+            <button onclick="adicionarAoCarrinho('Viagra do Bolsonaro', 35.90)">Comprar</button>
+        </div>
+
+        <div class="produto">
+            <h2>Dedo do Lula</h2>
+            <img src="https://cdn-icons-png.flaticon.com/512/4151/4151813.png" alt="Produto B" width="100%">
+            <h3>R$ 60,10</h3>
+            <button onclick="adicionarAoCarrinho('Dedo do Lula', 60.10)">Comprar</button>
+        </div>
+
+        <div class="produto">
+            <h2>Fimose do Kid</h2>
+            <img src="https://pngimg.com/uploads/scarf/scarf_PNG25.png" alt="Produto C" width="100%">
+            <h3>R$ 20,50</h3>
+            <button onclick="adicionarAoCarrinho('Fimose do Kid', 20.50)">Comprar</button>
+        </div>
+    </div>
+
+    <script>
+        let total = 0;
+        let carrinhoItens = {}; // Armazena produtos e quantidades
+
+        function adicionarAoCarrinho(produto, preco) {
+            // Verifica se o produto já está no carrinho
+            if (carrinhoItens[produto]) {
+                carrinhoItens[produto].quantidade++;
+            } else {
+                carrinhoItens[produto] = { preco: preco, quantidade: 1 };
+            }
+
+            atualizarCarrinho(); // Atualiza a exibição do carrinho
+        }
+
+        function atualizarCarrinho() {
+            let lista = document.getElementById("carrinho");
+            lista.innerHTML = ""; // Limpa o carrinho antes de atualizar
+
+            total = 0; // Reseta o total
+
+            for (let produto in carrinhoItens) {
+                let item = document.createElement("li");
+                let precoTotal = carrinhoItens[produto].preco * carrinhoItens[produto].quantidade;
+                item.textContent = `${produto} x${carrinhoItens[produto].quantidade} - R$ ${precoTotal.toFixed(2)}`;
+                lista.appendChild(item);
+
+                total += precoTotal; // Atualiza o total da compra
+            }
+
+            document.getElementById("total").textContent = total.toFixed(2);
+        }
+
+        function finalizarCompra() {
+            let lista = document.getElementById("carrinho");
+            lista.innerHTML = ""; // Limpa os itens do carrinho
+            carrinhoItens = {}; // Reseta os produtos
+            total = 0; // Reseta o total
+            document.getElementById("total").textContent = total.toFixed(2);
+            alert("Compra concluída com sucesso! Obrigado por comprar conosco. Agora vai tomar no cu kkkkkkkkk.");
+        }
+    </script>
+
+</body>
+</html>

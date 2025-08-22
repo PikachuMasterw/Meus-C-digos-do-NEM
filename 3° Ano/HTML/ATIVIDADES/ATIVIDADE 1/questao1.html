@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Formulário de Incrição para Cursos</h1>
+    <h2>de HTML</h2>
+    <form>
+     <!-- NOME -->
+     <label for="nome">Nome Completo:</label>
+     <input type="text" name="nome" placeholder="Digite seu nome completo..." required><br><br>
+
+     <!-- EMAIL -->
+      <label for="email">Email:</label>
+      <input type="text" name="email" placeholder="Digite seu email..." required><br><br>
+
+      <!-- IDADE -->
+       <label for="idade">Idade:</label>
+       <input type="number" name="idade" min="16" placeholder="Insira a sua idade..." required><br><br>
+
+       <!-- NÍVEL DE CONHECIMENTO EM HTML -->
+        <label for="nivel">Nível de Conhecimento:</label>
+        <select name="nivel" required>
+            <option value=""></option>
+            <option value="inicia">Iniciante</option>
+            <option value="inter">Intermediário</option>
+            <option value="avancado">Avançado</option>
+        </select><br><br>
+
+        <!-- TURNO -->
+         <label for="turno">Turno:</label><br>
+
+         <input type="radio" name="turno" value="manha" required>
+         <label for="manha">Manhã</label>
+
+         <input type="radio" name="turno" value="tarde" required>
+         <label for="tarde">Tarde</label>
+
+         <input type="radio" name="turno" value="noite" required>
+         <label for="noite">Noite</label>
+         <br><br>
+
+         <!-- TÓPICOS DE INTERESSE -->
+         <p>Quais tópicos tem interesse?</p> 
+
+         <input type="checkbox" name="checkbox">
+          <label for="top">Tags Básicas</label>
+
+          <input type="checkbox" name="checkbox">
+          <label for="top">Formulários</label>
+
+          <input type="checkbox" name="checkbox">
+          <label for="top">Tabelas</label>
+
+          <input type="checkbox" name="checkbox">
+          <label for="top">CSS</label>
+
+          <br><br>
+
+          <!-- BOTÃO DE ENVIAR -->
+           <button type="submit">Enviar Cadastro </button>
+    </form>
+</body>
+</html>

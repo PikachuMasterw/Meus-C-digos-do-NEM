@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float salárioBase, gratificação = 5, desconto = 3, ganhar, perder;
+    
+    cout<<"Me informe o seu salário: ";
+    cin>>salárioBase;
+    
+    ganhar = (salárioBase * gratificação) / 100;
+    perder = (salárioBase * desconto) / 100;
+    
+    salárioBase = salárioBase + ganhar - perder;
+    
+    cout<<"Seu salário é : R$"<<salárioBase;
+    
+    return 0;

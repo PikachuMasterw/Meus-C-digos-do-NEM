@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   float martelo = 15.90;
+   float qtdMartelo, finalMartelo;
+   float parafuso = 0.70, qtdParafuso, finalParafuso;
+   float cf = 4.99, qtdCF, finalCF;
+   float lampada = 14.90, qtdLampada, finalLampada, gastoFinal;
+   
+   cout<<"_______________________________________________________________";
+   cout<<"\nMartelo : R$"<<martelo;
+   cout<<"\nParafuso : R$"<<parafuso;
+   cout<<"\nChave de Fenda : R$"<<cf;
+   cout<<"\nLampâda : R$"<<lampada;
+   cout<<"\n_______________________________________________________________";
+   
+   cout<<"\n\nQuantos martelos você quer? ";
+   cin>>qtdMartelo;
+   
+   cout<<"\n\nQuantos parafusos você quer? ";
+   cin>>qtdParafuso;
+   
+   cout<<"\n\nQuantas chaves de fenda você quer? ";
+   cin>>qtdCF;
+   
+   cout<<"\n\nQuantas lâmpadas você quer? ";
+   cin>>qtdLampada;
+   
+   finalMartelo = martelo * qtdMartelo;
+   finalParafuso = parafuso * qtdParafuso;
+   finalCF = cf * qtdCF;
+   finalLampada = lampada * qtdLampada;
+   
+   gastoFinal = finalMartelo + finalParafuso + finalCF + finalLampada;
+   
+   cout<<"\n\n_______________________________________________________________";
+   cout<<"\nNOTA DE FECHAMENTO";
+   cout<<"\n\n(Martelo) QTD " <<qtdMartelo<< " * "<< martelo<< " = "<<finalMartelo;
+   cout<<"\n\n(Parafuso) QTD " <<qtdParafuso<< " * "<< parafuso<< " = "<<finalParafuso;
+   cout<<"\n\n(Chave de Fenda) QTD " <<qtdCF<< " * "<< cf<< " = "<<finalCF;
+   cout<<"\n\n(Martelo) QTD " <<qtdLampada<< " * "<< lampada<< " = "<<finalLampada;
+   cout<<"\n\n(Gasto Total): " <<gastoFinal;
+   cout<<"\n_______________________________________________________________";
+   
+   
+    return 0;
+}

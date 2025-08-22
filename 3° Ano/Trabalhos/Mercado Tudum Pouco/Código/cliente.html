@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Produtos – Mercado</title>
+      <link rel="icon" href="https://images.icon-icons.com/1138/PNG/512/1486395307-17-store_80571.png">
+  <link rel="stylesheet" href="cliente.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <nav>
+      <ul>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#historico">Histórico de Pedidos</a></li>
+      </ul>
+    </nav>
+    <button id="abrir-carrinho" class="btn-carrinho" aria-label="Abrir carrinho">
+      🛒 Carrinho (<span id="contador-itens">0</span>)
+    </button>
+  </aside>
+
+  <!-- Conteúdo Principal -->
+  <main class="dashboard">
+
+    <!-- Seção de Produtos -->
+    <section id="produtos">
+      <h2>Produtos Disponíveis</h2>
+      <div class="card-list">
+        <article class="card">
+          <img src="https://supermercadosimperatriz.vteximg.com.br/arquivos/ids/160760-1000-1000/BEBIDA-LACTEA-UHT-CHOCOLATE-TODDYNHO-CAIXA-200ML.png?v=637734325098200000"
+               alt="Toddynho 200ml" loading="lazy">
+          <div class="card-content">
+            <h4>Toddynho</h4>
+            <p>R$ 5,00</p>
+            <button class="btn-comprar"
+                    onclick="adicionarAoCarrinho('Toddynho', 5.00)">
+              Comprar
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://static.paodeacucar.com/img/uploads/1/679/22709679.png"
+               alt="Fanta Laranja 350ml" loading="lazy">
+          <div class="card-content">
+            <h4>Fanta Laranja</h4>
+            <p>R$ 4,90</p>
+            <button class="btn-comprar"
+                    onclick="adicionarAoCarrinho('Fanta Laranja', 4.90)">
+              Comprar
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://pngfre.com/wp-content/uploads/monster-energy-drink-32.png"
+               alt="Monster 473ml" loading="lazy">
+          <div class="card-content">
+            <h4>Monster 473ml</h4>
+            <p>R$ 10,90</p>
+            <button class="btn-comprar"
+                    onclick="adicionarAoCarrinho('Monster 473ml', 10.90)">
+              Comprar
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção de Histórico de Pedidos -->
+    <section id="historico">
+      <h2>Histórico de Pedidos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Pedido</th>
+            <th>Data</th>
+            <th>Total (R$)</th>
+          </tr>
+        </thead>
+        <tbody id="historico-body">
+          <!-- Preencha dinamicamente ou com placeholders -->
+          <tr>
+            <td>#0001</td>
+            <td>08/07/2025</td>
+            <td>20,90</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Modal de Carrinho -->
+  <div id="modal-carrinho" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button id="fechar-modal" class="fechar" aria-label="Fechar">&times;</button>
+      <h2>Seu Carrinho</h2>
+      <ul id="carrinho-lista"></ul>
+      <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
+      <button id="btn-finalizar" class="btn-finalizar">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <script src="cliente.js"></script>
+</body>
+</html>

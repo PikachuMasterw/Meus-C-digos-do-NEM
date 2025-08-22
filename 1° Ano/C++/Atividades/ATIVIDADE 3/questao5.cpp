@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int aux, num, div=0;
+    cout<<"Digite um número: ";
+    cin>>num;
+
+    for(aux=1 ; aux<=num ; aux++)
+        if(num%aux==0)
+            div++;
+
+    if(div==2)
+        cout<<"É primo";
+    else
+        cout<<"Não é primo";
+    return 0;
+}

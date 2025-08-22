@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int posi = 0, nega = 0, zero = 0, repete = 0, num = 1;
+  float n1;
+  
+  cout<<"Quantos números você quer repetir: ";
+  cin>>repete;
+  
+  while(repete > 0){
+      cout<<num<<"/"<<repete + num - 1;
+      cout<<"\nDigite um número: ";
+      cin>>n1;
+      
+      if(n1 > 0){
+          posi = posi + 1;
+      }
+      
+      if(n1 < 0){
+          nega = nega + 1;
+      }
+      
+      if(n1 == 0){
+          zero = zero + 1;
+      }
+      
+      repete = repete - 1;
+       num = num + 1;
+  }
+  
+  cout<<"\n";
+  cout<<"\nPOSITIVOS: "<<posi<<"\nNEGATIVOS: "<<nega<<"\nN° = A ZERO: "<<zero;
+    return 0;
+}

@@ -1,0 +1,33 @@
+#include <iostream>
+
+
+
+using namespace std;
+
+
+int main() {
+    int A[10],B[10], soma = 0, impor;
+    
+    for(int cont = 0; cont < 10;cont++){
+    cout<<"\nDigite um número: ["<<cont<<"]: ";
+        cin>>A[cont];
+        
+        if(cont % 2 == 0){
+            soma = A[cont] * 5;
+            cout<<"\nSeu número é par! !"<<soma<<"!\n";
+            B[cont] = soma;
+        }
+        
+        else{
+            soma = 0;
+            soma = A[cont] + 5;
+            cout<<"\nSeu número é ímpar! !"<<soma<<"!\n";
+            B[cont] = soma;
+        }
+    }
+    cout<<"\nMatriz B: ";
+   for(int l; l <= 9; l++){
+    cout<<"\nValor ("<<l<<"): "<<B[l];
+   }
+    return 0;
+}

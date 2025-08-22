@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float nota1, nota2, notaFinal;
+    
+    cout << "Nota máxima (100):\n";
+    cout << "Digite nota 1: ";
+    cin >> nota1;
+    cout << "Digite nota 2: ";
+    cin >> nota2;
+    
+    notaFinal = (nota1 + nota2)/2;
+    
+    cout << "Nota final: " << notaFinal <<endl;
+    
+    if(notaFinal >= 60){
+        cout << "Você passsou de ano!";
+    }
+    
+    if(notaFinal < 60){
+        cout << "Você foi de Vasco!";
+    }
+    
+
+    return 0;
+}

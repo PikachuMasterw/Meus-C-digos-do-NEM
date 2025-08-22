@@ -1,0 +1,81 @@
+:root {
+  --primary: #e91e63;
+  --bg: #fff;
+  --text: #333;
+  --error: #e53935;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: url(img/mercado.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+label {
+  text-align: left;
+  display: block;
+  margin-top: 1rem;
+  color: var(--text);
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1.5rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+button:enabled {
+  opacity: 1;
+}
+
+.error {
+  color: var(--error);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}

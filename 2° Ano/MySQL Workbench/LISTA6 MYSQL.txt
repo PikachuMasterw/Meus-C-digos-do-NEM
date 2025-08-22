@@ -1,0 +1,131 @@
+CREATE TABLE produtos (
+COD_PROD INTEGER PRIMARY KEY,
+NOME_PRODUTO VARCHAR(100) NOT NULL,
+PRECO DECIMAL(10, 2)
+);
+-- Inserção de 10 registros na tabela produtos
+INSERT INTO produtos (COD_PROD, NOME_PRODUTO, PRECO) VALUES
+(101, 'Notebook', 3500.00),
+(102, 'Smartphone', 2000.00),
+(103, 'Tablet', 1200.00),
+(104, 'Monitor', 800.00),
+(105, 'Teclado', 100.00),
+(106, 'Mouse', 50.00),
+(107, 'Impressora', 600.00),
+(108, 'Webcam', 150.00),
+(109, 'Fone de Ouvido', 90.00),
+(110, 'Smartwatch', 900.00);
+
+CREATE TABLE vendas (
+ID_NF INTEGER PRIMARY KEY AUTO_INCREMENT,
+COD_PROD INTEGER,
+QUANTIDADE INTEGER NOT NULL,
+DATA_VENDA DATE,
+FOREIGN KEY (COD_PROD) REFERENCES produtos(COD_PROD)
+);
+-- Inserção de 10 registros na tabela vendas
+INSERT INTO vendas (COD_PROD, QUANTIDADE, DATA_VENDA) VALUES
+(101, 3, '2024-09-01'),
+(102, 1, '2024-09-02'),
+(103, 2, '2024-09-03'),
+(104, 5, '2024-09-04'),
+(105, 7, '2024-09-05'),
+(106, 9, '2024-09-06'),
+(107, 1, '2024-09-07'),
+(108, 3, '2024-09-08'),
+(109, 2, '2024-09-09'),
+(110, 4, '2024-09-10');
+
+CREATE TABLE pedidos (
+ID_PEDIDO INTEGER PRIMARY KEY AUTO_INCREMENT,
+DATA_PEDIDO DATE NOT NULL
+);
+-- Inserção de 10 registros na tabela pedidos
+
+INSERT INTO pedidos (DATA_PEDIDO) VALUES
+('2024-09-11'),
+('2024-09-12'),
+('2024-09-13'),
+('2024-09-14'),
+('2024-09-15'),
+('2024-09-16'),
+('2024-09-17'),
+('2024-09-18'),
+('2024-09-19'),
+('2024-09-20');
+
+CREATE TABLE itens_pedido (
+ID_PEDIDO INTEGER,
+COD_PROD INTEGER,
+QUANTIDADE INTEGER,
+PRIMARY KEY (ID_PEDIDO, COD_PROD),
+FOREIGN KEY (ID_PEDIDO) REFERENCES pedidos(ID_PEDIDO),
+FOREIGN KEY (COD_PROD) REFERENCES produtos(COD_PROD)
+);
+-- Inserção de 10 registros na tabela itens_pedido
+INSERT INTO itens_pedido (ID_PEDIDO, COD_PROD, QUANTIDADE) VALUES
+(1, 101, 2),
+(2, 102, 1),
+(3, 103, 5),
+(4, 104, 7),
+(5, 105, 2),
+(6, 106, 3),
+(7, 107, 4),
+(8, 108, 1),
+(9, 109, 6),
+(10, 110, 9);
+
+1)
+SELECT vendas.ID_NF, produtos.NOME_PRODUTO, vendas.QUANTIDADE
+FROM vendas
+JOIN produtos ON vendas.COD_PROD = produtos.COD_PROD;
+
+2)
+INSERT INTO vendas (COD_PROD, QUANTIDADE, DATA_VENDA)
+VALUES (103, 3, '2024-09-11');
+
+3)
+UPDATE vendas
+SET QUANTIDADE = 5
+WHERE ID_NF = 1;
+
+4)
+SELECT * FROM vendas
+WHERE DATA_VENDA = '2024-09-05';
+
+5)
+SELECT produtos.NOME_PRODUTO, SUM(vendas.QUANTIDADE) AS TOTAL_VENDAS
+FROM vendas
+JOIN produtos ON vendas.COD_PROD = produtos.COD_PROD
+GROUP BY produtos.NOME_PRODUTO;
+
+6)
+INSERT INTO pedidos(ID_PEDIDO, DATA_PEDIDO)
+VALUES (30, '2024-09-10'), 
+(31, '2024-09-11');
+
+INSERT INTO itens_pedido(ID_PEDIDO, COD_PROD, QUANTIDADE)
+VALUES (30, 101, 1), 
+(31, 110 ,2);
+
+7)
+SELECT * FROM itens_pedido
+WHERE ID_PEDIDO = 5;
+
+8)
+UPDATE produtos
+SET PRECO = 2200
+WHERE COD_PROD = 102;
+
+9)
+DELETE FROM itens_pedido
+WHERE ID_PEDIDO = 3;
+
+10) Anulada
+
+11)
+SELECT * FROM vendas
+WHERE DATA_VENDA = '2024-09-05';
+
+DELETE FROM vendas
+WHERE ID_NF = 5;

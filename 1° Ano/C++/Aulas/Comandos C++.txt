@@ -1,0 +1,30 @@
+int = inteiro (utiliza 4 bytes de memória e armazena números inteiros sem casas decimais com valores que vão de -2.147.483.648 a 2.147.483.647)
+float = real
+cin >> = leia
+cout = escreva
+using namespace std; (não usar mais "std")
+if = se
+else = se não
+endl = finaliza frase
+char = caractere (1 letra)
+|| = ou
+string = cadeia
+for = para (repetição com condição e incremento)
+and / && = e (adição)
+while = enquanto (repetição enquanto for verdadeira)
+do-while = repetição com condição
+power = calculo de potência
+
+#include iostream = SISTEMA DE COMANDOS BÁSICOS
+
+#include stdio.h = biblioteca onde as instruções de entrada e saída foram definidas (fprintf, printf, fscanf, scanf, getchar, putc, getc, fopen, fclose...)
+
+#include stdlib.h = biblioteca é a responsável por conversões de números, alocação na memória e outras tarefas (atof, atol, rand, malloc, realloc, free e system...)
+
+#include math.h = biblioteca declara funções matemáticas que podem servir para: achar a raiz quadrada, achar o seno, co-seno, tangente, logaritmo na base 10 (sqrt, sin, cos, tan, log10)
+
+#include ctype.h = biblioteca serve para testar caracteres. Alguns testes possíveis com caracteres são: testar se é maiúsculo, testar se é minúsculo, testar se é espaço, testar digito decimal (isupper, islower, isspace, isdigit, toupper, tolower...)
+
+#include string.h = A função string é responsável por disponibilizar funções para trabalhar com conjuntos de caracteres, isto é, strings (strcpy, strcat, strcmp, strlen, memcpy, memmove e memcmp)
+
+#include time.h = Esta biblioteca declara funções para manipularmos a data e hora (clock, time e difftime)

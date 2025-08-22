@@ -1,0 +1,50 @@
+-- Renomear a tabela Customers para Clientes 
+ALTER TABLE Customers 
+RENAME TO Clientes; 
+ 
+-- Renomear as colunas para português 
+ALTER TABLE Clientes 
+RENAME COLUMN customer_id TO id_cliente; 
+ 
+ALTER TABLE Clientes 
+RENAME COLUMN first_name TO primeiro_nome; 
+ 
+ALTER TABLE Clientes 
+RENAME COLUMN last_name TO sobrenome; 
+ 
+ALTER TABLE Clientes 
+RENAME COLUMN age TO idade; 
+ 
+ALTER TABLE Clientes 
+RENAME COLUMN country TO pais; 
+ 
+-- Renomear a tabela Orders para Pedidos 
+ALTER TABLE Orders 
+RENAME TO Pedidos; 
+ 
+-- Renomear as colunas para português 
+ALTER TABLE Pedidos 
+RENAME COLUMN order_id TO id_pedido; 
+ 
+ALTER TABLE Pedidos 
+RENAME COLUMN item TO item; 
+ 
+ALTER TABLE Pedidos 
+RENAME COLUMN amount TO quantidade; 
+ 
+ALTER TABLE Pedidos 
+RENAME COLUMN customer_id TO id_cliente; 
+ 
+-- Renomear a tabela Shippings para Encomendas 
+ALTER TABLE Shippings 
+RENAME TO Encomendas; 
+ 
+-- Renomear as colunas para português 
+ALTER TABLE Encomendas 
+RENAME COLUMN shipping_id TO id_envio; 
+ 
+ALTER TABLE Encomendas 
+RENAME COLUMN status TO status; 
+ 
+ALTER TABLE Encomendas 
+RENAME COLUMN customer TO id_cliente;

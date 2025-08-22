@@ -1,0 +1,25 @@
+1)
+SELECT nome, sobrenome FROM Clientes;
+
+2)
+SELECT nome, nacionalidade FROM Clientes
+WHERE nacionalidade = 'USA';
+
+3)
+SELECT item, quantidade, id_cliente FROM Pedidos;
+
+4)
+SELECT id_envio, status FROM Encomendas
+WHERE status = "Pending";
+
+5)
+SELECT primeiro_nome, idade FROM Clientes
+WHERE idade > 30;
+
+6)
+SELECT id_pedido, item, quantidade, id_cliente FROM Pedidos
+WHERE id_cliente = 4;
+
+7)
+SELECT id_envio, status, id_cliente FROM Encomendas
+WHERE id_cliente = 3;

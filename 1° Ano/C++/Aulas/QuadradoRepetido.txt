@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x, inicio = 0, cont;
+    
+    cout<<"Digite quantas vezes nós realizaremos a repetição: ";
+    cin>>cont;
+    
+    while(inicio < cont){
+        cout<<"\nDigite um número: ";
+        cin>>x;
+        cout<<x<<" ^ 2 = "<<x * x;
+        inicio = inicio + 1;
+    }
+    
+    
+    return 0;
+}

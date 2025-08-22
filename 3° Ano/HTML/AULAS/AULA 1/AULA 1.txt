@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Primeira Página Web</title>
+</head>
+<body>
+    <header>
+        <h1>Desenvolvedor Full Stack</h1>
+    </header>
+    <section>
+        <h2>Tecnologias</h2>
+        <p>Essas são as principais tecnologias do trabalho</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Java Script</li>
+            <li>Node</li>
+        </ul>
+    </section>
+    <section>
+        <p>O que eu aprendi primeiro</p>
+        <ol>
+            <li>Portugol</li>
+            <li>React</li>
+            <li>C</li>
+        </ol>
+    </section>
+    <footer>
+        <p>Criado em 2025 com a turma de 3° ano</p>
+    </footer>
+</body>
+</html>

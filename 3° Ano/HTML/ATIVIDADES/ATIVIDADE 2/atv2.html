@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição para Oficina</title>
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <h3>Para HTML</h3>
+    <form>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" name="nome" placeholder="Digite seu nome completo..." required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" placeholder="Digite seu email..." required><br><br>
+
+        <label for="idade">Idade:</label>
+        <input type="number" min="16" placeholder="Insira a sua idade..." required><br><br>
+
+        <label for="nivel.con">Nível de Conhecimento:</label>
+        <select name="nivel.con" required>
+            <option value=""></option>
+            <option value="inicia">Iniciante</option>
+            <option value="inter">Intermediário</option>
+            <option value="avanca">Avançado</option>
+        </select><br><br>
+
+        <label for="turno">Turno de Preferência:</label><br>
+
+        <input type="radio" name="turno" value="manha" required>
+        <label for="manha">Manhã</label>
+
+        <input type="radio" name="turno" value="tarde" required>
+        <label for="tarde">Tarde</label>
+
+        <input type="radio" name="turno" value="noite" required>
+        <label for="noite">Noite</label><br><br>
+
+        <p>Quais tópicos tem interresse?</p>
+
+        <input type="checkbox" name="checkbox">
+        <label for="top">Tags Básicas</label>
+
+        <input type="checkbox" name="checkbox">
+        <label for="top">Formulários</label>
+
+        <input type="checkbox" name="checkbox">
+        <label for="top">Tabelas</label>
+
+        <input type="checkbox" name="checkbox">
+        <label for="top">CSS</label>
+        <br><br>
+
+        <button type="submit">Inscrever-se</button>
+    </form>
+</body>
+</html>

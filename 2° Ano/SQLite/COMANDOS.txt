@@ -1,0 +1,13 @@
+SELECT = Selecionar
+DELETE FROM = Deletar
+INSERT INTO = Inserir valores (na tabela)
+VALUES (valores de sua respetiva coluna) = Valores
+ALTER TABLE = Alternativa tabela 
+WHERE = (Procurar algo na tabela)
+TO = (atualmente usado para renomear no resultado final)
+RENAME TO = Renomear
+COLUMN = Coluna
+FROM = "de"
+UPDATE = Atualizar algo na tabela
+SET = Definir
+ADD = Adicionar informações 
